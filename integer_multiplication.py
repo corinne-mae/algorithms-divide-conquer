@@ -18,10 +18,11 @@ def rec_int_mult(x, y):
     y_a = abs(y)
 
     if len(str(x_a)) == 0 or len(str(y_a)) == 0:
+        print('zero string')
         return 1
 
     if len(str(int(x_a))) == 1 or len(str(int(y_a))) == 1:
-        return x * y
+        return x_a * y_a
 
     else:
         n = max(len(str(x_a)), len(str(y_a)))
@@ -38,7 +39,7 @@ def rec_int_mult(x, y):
         bc = rec_int_mult(b, c)
         bd = rec_int_mult(b, d)
 
-        out = (pow(10, n))*ac + (pow(10, half_n))*(ad + bc) + bd
+        out = (pow(10, 2*half_n))*ac + (pow(10, half_n))*(ad + bc) + bd
         return sign * out
 
 
@@ -67,3 +68,6 @@ def test_multiplication_large_numbers(
 def test_negative_multiplication(x=-22, y=55):
     assert rec_int_mult(x, y) == -1210
 
+
+def test_med_multiplication(x=134, y=134):
+    assert rec_int_mult(x, y) == 17956
