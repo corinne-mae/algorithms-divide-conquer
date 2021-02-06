@@ -1,8 +1,0 @@
-[
-  "intiger_multiplication.py::test_rec_int_mult_1",
-  "intiger_multiplication.py::test_mult_ten",
-  "intiger_multiplication.py::test_two_digit_nums",
-  "intiger_multiplication.py::test_not_equal",
-  "intiger_multiplication.py::test_large_num",
-  "intiger_multiplication.py::test_negative_mult"
-]
